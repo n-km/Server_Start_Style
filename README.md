@@ -1,2 +1,2 @@
 # Server_Start_Style
- ### <button>Go to Website</button>
+''This is a Python program designed to simulate the interface of a server startup program.''
