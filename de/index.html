@@ -11,16 +11,26 @@
         }
         .headline {
             background-color: rgb(52, 193, 0);
-            width: 99%;
+            width: 98.5%;
             height: max-content;
-            border-radius: 10px;
-            padding: 5px;
+            border-radius: 0px 0px 10px 10px;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 10px black;
         }
         .headline p {
+            margin-top: 0px;
             float: left;
             color: white;
+            background-color: rgba(231, 231, 231, 0.5);
+            border-radius: 15px 0px 15px 15px;
+            padding: 5px;
+            box-shadow: 0 0 5px white;
         }
         .headline button {
+            margin-top: 10px;
             background-color: transparent;
             color: white;
             height: 50px;
@@ -29,6 +39,7 @@
             transition: 0.2s;
             cursor: pointer;
             background-color: rgba(255, 255, 255, 0.326);
+            margin-left: 5px;
         }
         .headline button:hover {
             box-shadow: 0 0 10px white;
@@ -92,18 +103,57 @@
             color: red;
             text-decoration: underline;
         }
-        .header {
+        table  {
             background-color: rgb(199, 199, 199);
+            padding: 7px;
+            border-radius: 7px;
+        }
+        .header-table {
+            background-color: rgb(180, 180, 180);
             color: black;
         }
-        .header th {
+        .header-table th {
             padding: 10px;
+        }
+        .footer-table {
+            background-color: rgb(199, 199, 199);
+        }
+        .footer-table th {
+            padding: 10px;
+        }
+        .DOWN_py {
+            padding: 5px;
+            border-radius: 10px;
+            border-width: 0px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.675);
+            transition: 0.2s;
+        }
+        .DOWN_py:hover {
+            background-color: rgb(221, 143, 0);
+            color: white;
+        }
+        .DOWN_programm {
+            padding: 15px;
+            border-radius: 0px;
+            border-width: 5px;
+            border-color: transparent;
+            border-style: double;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.675);
+            transition: 0.2s;
+        }
+        .DOWN_programm:hover {
+            border-color: white;
+            background-color: rgba(0, 0, 0, 0.353);
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="startseite" id="SS">
         <div class="headline">
+            
             <p>Server<br>Status<br>Programm</p>
             <button onclick="OVS.style.transform = 'translate(0px , 135%)'" style="float: right;">Download (old versions)</button>
             <button style="float: right;" onclick="CTC.style.transform = 'translate(0px , 135%)'">Kontakt</button>
@@ -113,6 +163,9 @@
                 
            
         </div>
+        <br>
+        <br>
+        <br>
         <div class="neues">
             <img src="show.png">
             <h1>Die ultimative Lösung für mühelosen Serverstart</h1>
@@ -161,7 +214,16 @@
     <div class="container" id="OVS">
         <button style="float: right;" onclick="OVS.style.transform='translate(0px , -135px)'" class="close-btn">Close</button>
         <h1>Download von alten Versionen</h1>
-        V.0.0.1 <a href="">Download</a>
+        <table>
+            <tr class="header-table">
+                <th>Version</th>
+                <th>Hyperlink</th>
+            </tr>
+            <tr class="footer-table">
+                <th>1.0</th>
+                <th><a href="">Download</a></th>
+            </tr>
+        </table>
         
     </div>
     <div class="container" id="CTC">
@@ -169,22 +231,19 @@
         <h1>Kontakte</h1>
         <li>
                  Teamspeak-Server auf Anfrage
-           
+        </li>
+        <li>
+                 Discord-Server
         </li>
     </div>
     <div class="container" id="DOWN">
         <button style="float: right;" onclick="DOWN.style.transform='translate(0px , -135px)'" class="close-btn">Close</button>
         <h1>Download</h1>
-        <table>
-            <tr class="header">
-                <th>Version</th>
-                <th>Hyperlink</th>
-            </tr>
-            <tr class="">
-                <th>1.0</th>
-                <th><a href="">Download</a></th>
-            </tr>
-        </table>
+        <h3>1. Step: Download Python</h3>
+        <form action="https://www.python.org/downloads/"><button class="DOWN_py"><img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/python-icon.png" height="70px" ><h1>Download</h1></button></form>
+        <br>
+        <h3>2. Step: Download Server-Status-Program</h3>
+        <form action="/Download/Server.py" ><button class="DOWN_programm"><h1>Download 1.0</h1></button></form>
     </div>
 </body>
 </html>
