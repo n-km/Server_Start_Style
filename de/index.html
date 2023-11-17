@@ -92,7 +92,10 @@
             color: red;
             text-decoration: underline;
         }
-
+        .header {
+            background-color: rgb(199, 199, 199);
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -169,7 +172,16 @@
     <div class="container" id="DOWN">
         <button style="float: right;" onclick="DOWN.style.transform='translate(0px , -135px)'" class="close-btn">Close</button>
         <h1>Download</h1>
-        
+        <table>
+            <tr class="header">
+                <th>Version</th>
+                <th>Hyperlink</th>
+            </tr>
+            <tr>
+                <th>1.0</th>
+                <th><a href="">Download</a></th>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
